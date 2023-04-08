@@ -7,7 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{45
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manager", "Manager", "{0603D003-1074-4CBA-A4D8-38D3B6665CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager.API", "Services\Manager\Manager.API\Manager.API.csproj", "{DA5C7C79-5115-4A05-9192-6BC7FCEB768B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manager.API", "Services\Manager\Manager.API\Manager.API.csproj", "{DA5C7C79-5115-4A05-9192-6BC7FCEB768B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FA0199B8-E5D8-41BC-BAF7-A52BF530906E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{F9AEBD22-2F1F-45C7-B8A4-AE6442CBE990}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{DA5C7C79-5115-4A05-9192-6BC7FCEB768B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5C7C79-5115-4A05-9192-6BC7FCEB768B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5C7C79-5115-4A05-9192-6BC7FCEB768B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0199B8-E5D8-41BC-BAF7-A52BF530906E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0199B8-E5D8-41BC-BAF7-A52BF530906E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0199B8-E5D8-41BC-BAF7-A52BF530906E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0199B8-E5D8-41BC-BAF7-A52BF530906E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0603D003-1074-4CBA-A4D8-38D3B6665CBB} = {459D7720-FD17-4879-80C1-BD86AE278AED}
 		{DA5C7C79-5115-4A05-9192-6BC7FCEB768B} = {0603D003-1074-4CBA-A4D8-38D3B6665CBB}
+		{F9AEBD22-2F1F-45C7-B8A4-AE6442CBE990} = {459D7720-FD17-4879-80C1-BD86AE278AED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21D4EBA7-908B-40AC-9615-AC1BCE0410DB}

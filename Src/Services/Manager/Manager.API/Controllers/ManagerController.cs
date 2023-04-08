@@ -1,4 +1,5 @@
-﻿using Manager.API.Entities;
+﻿using Manager.API.Dtos;
+using Manager.API.Entities;
 using Manager.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -21,7 +22,8 @@ namespace Manager.API.Controllers
         {
             try
             {
-                var projectMembers = await _memberRepository.GetMembers();
+                var projectMembers = (await _memberRepository.GetMembers())
+                    .Select(member => member.ToDto());
                 return Ok(projectMembers);
             }
             catch (Exception)
@@ -33,8 +35,8 @@ namespace Manager.API.Controllers
 
         [HttpGet("{memberId}", Name = "GetMember")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(Member), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<Member>> GetMemberById(string memberId)
+        [ProducesResponseType(typeof(MemberDto), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<MemberDto>> GetMemberById(string memberId)
         {
 
             var member = await _memberRepository.GetMemberById(memberId);
@@ -42,7 +44,7 @@ namespace Manager.API.Controllers
             {
                 return NotFound();
             }
-            return member;
+            return member.ToDto();
 
         }
 

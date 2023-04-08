@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  pmtDb:
+    image: mongo
+    ports:
+        - 27017:27017
+    volumes:
+        - mongo_data:/data/db
+
+  manager.api:
+    image: ${DOCKER_REGISTRY-}managerapi
+    build:
+      context: .
+      dockerfile: Services/Manager/Manager.API/Dockerfile     
+
+volumes:
+  mongo_data:
