@@ -12,7 +12,13 @@ services:
     image: ${DOCKER_REGISTRY-}managerapi
     build:
       context: .
-      dockerfile: Services/Manager/Manager.API/Dockerfile     
+      dockerfile: Services/Manager/Manager.API/Dockerfile
+  
+  project.api:
+    image: ${DOCKER_REGISTRY-}projectapi
+    build:
+      context: .
+      dockerfile: Services/Project/Project.API/Dockerfile
 
 volumes:
   mongo_data:

@@ -18,3 +18,13 @@ services:
       - pmtDb
     ports:
       - "8000:80"
+
+  project.api:
+    container_name: project.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://pmtDb:27017"
+    depends_on:
+      - pmtDb
+    ports:
+      - "8001:81"

@@ -1,11 +1,9 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
-using System.ComponentModel.DataAnnotations;
-
-namespace Manager.API.Dtos
+﻿namespace Manager.API.Dtos
 {
     public class MemberDto
     {
+        public string Id { get; set; } = string.Empty;
+
         public string MemberId { get; set; } = string.Empty;
 
         public string Name { get; set; } = string.Empty;

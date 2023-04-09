@@ -13,6 +13,7 @@ namespace Manager.API
                 AdditionalInfo = member.AdditionalInfo,
                 AllocationPercentage = member.AllocationPercentage,
                 Experience = member.Experience,
+                Id = member.Id,
                 Name = member.Name,
                 ProjectEndDate = member.ProjectEndDate,
                 ProjectStartDate = member.ProjectStartDate,
